@@ -1,0 +1,5 @@
+process {
+    withName: '.*:BBMAP_BBNORM' {
+        memory = 124.GB
+    }
+}

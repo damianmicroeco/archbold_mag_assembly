@@ -1,0 +1,8 @@
+jobs/work/
+jobs/.apptainer_cache/
+jobs/.nextflow*
+jobs/logs/
+jobs/*log*
+nxf_cache/
+out/
+raw_data/
