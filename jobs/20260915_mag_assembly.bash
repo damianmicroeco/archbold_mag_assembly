@@ -111,7 +111,7 @@ nextflow run nf-core/mag \
 	-profile alliance_canada \
 	--input $SAMPLESHEET \
 	--bbnorm \
-	--bnorm_target 100 \
+	--bbnorm_target 100 \
 	--bbnorm_min 5 \
 	--save_bbnorm_reads \
     --busco_db ${DATABASEPATH}/busco_db \
