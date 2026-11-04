@@ -106,6 +106,10 @@ mkdir -p logs "$APPTAINER_CACHEDIR" "$NXF_HOME"
 # contigs are real. But, if you have really diverse samples and a lot of samples, you
 # might just not be able to realistically run the analysis.
 
+# One issue I was having after bbnorm was that some of the samples were badly prepped
+# and so was empty after bbnorm. I include the `--errorStrategy ignore` kwarg so that
+# empty bbnorm files don't crash the entire pipeline. Use that at your own risk.
+
 nextflow run nf-core/mag \
 	-r 5.5.0 \
 	-profile alliance_canada \
@@ -122,7 +126,8 @@ nextflow run nf-core/mag \
 	--max_memory $MAX_MEM \
 	--outdir $OUTDIR \
 	-c $PARAM_FILE \
-	-resume
+	-resume \
+	--errorStrategy ignore
 
 # Docs:
 #   nf-core/mag pipeline: https://nf-co.re/mag
