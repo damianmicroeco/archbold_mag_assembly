@@ -1,0 +1,15 @@
+Some sequencing files don't actually have any reads. Thus, I changed the mag assembly samplesheet to not include those samples and created a selected_raw_data folder for files that seem to have reads. I found this out when running the pipeline with all samples originally and found that some are empty. So, the cutoff was any fastq.gz file smaller than the biggest sterile water sample.
+
+The samples were:
+S244
+S199
+S154
+S245
+S152
+S253
+S250
+S206
+S249
+S255
+S223
+S218

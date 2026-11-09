@@ -1,0 +1,9 @@
+process {
+    withName: '.*:BBMAP_BBNORM' {
+        memory = 124.GB
+    }
+
+    withName: 'MEGAHIT' {
+        memory = '128 GB'
+    }
+}

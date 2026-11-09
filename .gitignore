@@ -6,3 +6,4 @@ jobs/*log*
 nxf_cache/
 out/
 raw_data/
+selected_raw_data/
