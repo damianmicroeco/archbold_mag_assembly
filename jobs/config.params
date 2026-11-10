@@ -1,3 +1,6 @@
+// Path containing offline copies of major apptainers
+singularity.cacheDir = '/home/herna499/scratch/mag_containers/'
+
 process {
     withName: '.*:BBMAP_BBNORM' {
         memory = 124.GB
