@@ -107,7 +107,7 @@ mkdir -p logs "$APPTAINER_CACHEDIR" "$NXF_HOME"
 # might just not be able to realistically run the analysis.
 
 # One issue I was having after bbnorm was that some of the samples were badly prepped
-# and so was empty after bbnorm. I include the `--errorStrategy ignore` kwarg so that
+# and so were empty after bbnorm. I include the `--errorStrategy ignore` kwarg so that
 # empty bbnorm files don't crash the entire pipeline. Use that at your own risk.
 
 nextflow run nf-core/mag \

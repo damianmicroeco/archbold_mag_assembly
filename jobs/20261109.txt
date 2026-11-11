@@ -1,4 +1,4 @@
-Some sequencing files don't actually have any reads. Thus, I changed the mag assembly samplesheet to not include those samples and created a selected_raw_data folder for files that seem to have reads. I found this out when running the pipeline with all samples originally and found that some are empty. So, the cutoff was any fastq.gz file smaller than the biggest sterile water sample.
+20261109: Some sequencing files don't actually have any reads. Thus, I changed the mag assembly samplesheet to not include those samples and created a selected_raw_data folder for files that seem to have reads. I found this out when running the pipeline with all samples originally and found that some are empty. So, the cutoff was any fastq.gz file smaller than the biggest sterile water sample.
 
 The samples were:
 S244
@@ -13,3 +13,19 @@ S249
 S255
 S223
 S218
+
+20261111: After filtering for the samples above, we actually progressed to the Prodigal stage. But, some samples (e.g., S157) did not have any contigs greater than 500 bp which causes the pipeline to fail at the Quast step for MetaSpades. After discussing with Teresa, for proof of principle, we are arbitrarily removing all samples with raw data sizes smaller than 1GB. This is just to restrict the pipeline to things that should have decent enough depth (assuming 1GB is enough) to actually build MAGs.
+These are the above sample plus:
+S238
+S171
+S175
+S173
+S248
+S196
+S252
+S153
+S137
+S151
+S157
+S232
+S192
