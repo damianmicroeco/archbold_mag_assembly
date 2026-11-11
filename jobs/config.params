@@ -2,6 +2,8 @@
 singularity.cacheDir = '/home/herna499/scratch/mag_containers/'
 
 process {
+    errorStrategy = 'ignore'
+    
     withName: '.*:BBMAP_BBNORM' {
         memory = 124.GB
     }

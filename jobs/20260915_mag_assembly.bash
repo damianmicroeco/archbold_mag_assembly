@@ -126,8 +126,7 @@ nextflow run nf-core/mag \
 	--max_memory $MAX_MEM \
 	--outdir $OUTDIR \
 	-c $PARAM_FILE \
-	-resume \
-	--errorStrategy ignore
+	-resume 
 
 # Docs:
 #   nf-core/mag pipeline: https://nf-co.re/mag
